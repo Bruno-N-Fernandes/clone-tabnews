@@ -22,6 +22,6 @@
 		"tabWidth": 4,
 		"useTabs": true,
 		"semi": true,
-		"singleQuote": true
+		"singleQuote": false
 	}
 }
