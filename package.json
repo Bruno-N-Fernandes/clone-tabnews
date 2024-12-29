@@ -25,6 +25,10 @@
 		"tabWidth": 4,
 		"useTabs": true,
 		"semi": true,
-		"singleQuote": false
+		"singleQuote": false,
+		"[*.yaml]": {
+			"tabWidth": 2,
+			"useTabs": false
+		}
 	}
 }
