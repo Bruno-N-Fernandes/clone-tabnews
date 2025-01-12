@@ -15,7 +15,7 @@ async function waitForAllServices() {
 			},
 		});
 
-		async function fetchchStatusPage(bail, tryNumber) {
+		async function fetchchStatusPage() {
 			const response = await fetch("http://localhost:3000/api/v1/status");
 			if (!response.ok) {
 				throw new Error(`Http error ${response.status}`);
@@ -25,6 +25,8 @@ async function waitForAllServices() {
 	}
 }
 
-export default {
+const orchestrator = {
 	waitForAllServices,
 };
+
+export default orchestrator;
