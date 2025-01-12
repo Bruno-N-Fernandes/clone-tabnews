@@ -1,10 +1,12 @@
+/* eslint-disable no-undef */
+
 const { exec } = require("node:child_process");
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function checkPostgres() {
 	exec("docker exec postgres-dev pg_isready --host localhost", handleReturn);
 
-	async function handleReturn(error, stdout, stderr) {
+	async function handleReturn(error, stdout) {
 		if (stdout.search("accepting connections") < 0) {
 			process.stdout.cursorTo(0);
 			process.stdout.write("🟡  Postgres ainda não está pronto  ");
