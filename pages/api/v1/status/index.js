@@ -17,7 +17,7 @@ async function status(request, response) {
 				type: "postgres",
 				version: resultVersion.rows[0].server_version,
 				max_connections: parseInt(
-					resultMaxConnections.rows[0].max_connections
+					resultMaxConnections.rows[0].max_connections,
 				),
 				opened_connections: resultAcitiveConnections.rows[0].count,
 			},
