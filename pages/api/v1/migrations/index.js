@@ -24,7 +24,7 @@ export default async function migrations(request, response) {
 
 		if (request.method === "GET") {
 			const pendingMigrations = await migrationRunner(
-				defaultMigrationOptions
+				defaultMigrationOptions,
 			);
 			return response.status(200).json(pendingMigrations);
 		}

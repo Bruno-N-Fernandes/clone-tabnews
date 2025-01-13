@@ -10,7 +10,7 @@ async function waitForAllServices() {
 			maxTimeout: 350,
 			onRetry: (error, attempt) => {
 				console.log(
-					`Attempt ${attempt} failed. Status: ${error.message}`
+					`Attempt ${attempt} failed. Status: ${error.message}`,
 				);
 			},
 		});
